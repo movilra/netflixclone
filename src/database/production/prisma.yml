@@ -1,0 +1,2 @@
+endpoint: https://us1.prisma.sh/alex-000a09/production/prod
+datamodel: datamodel.graphql

@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Query users all works 1`] = `
+Array [
+  Object {
+    "email": "test@gmail.com",
+    "lastname": "test",
+    "name": "tes1",
+  },
+]
+`;

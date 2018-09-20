@@ -1,0 +1,85 @@
+
+type User {
+  id: ID! @unique
+  name: String!
+  lastname:String!
+  email:String! @unique
+  password:String!
+  birth_date:DateTime!
+  gender:Genders
+  status:Boolean @default(value:true)
+  paypal_id:String
+  avatar:String @default(value:"https://vignette.wikia.nocookie.net/bungostraydogs/images/1/1e/Profile-icon-9.png/revision/latest?cb=20171030104015")
+  suscription:Suscription
+}
+
+type Movie {
+    id: ID! @unique
+    title: String!
+    category:Categories!
+    sinopsis:String!
+    rate:Rates!
+    poster:String
+    relased_date:DateTime!
+    genre:Genres!
+    length:Int!
+    video_url:String!
+    suscription_type:Suscriptions!
+}
+
+
+type Rating{
+  id: ID! @unique
+  user:User!
+  movie:Movie!
+  rate:Float!
+}
+
+type Suscription {
+  id: ID! @unique
+  user:User!
+  suscription_type:Suscriptions!
+  end_date:DateTime!
+  price:Int!
+  
+}
+
+
+
+enum Suscriptions{
+  FREE
+  GOLD
+  PREMIUM
+}
+
+enum Genders {
+    H
+    M
+}
+
+
+enum Categories{
+  TVSHOW
+  MOVIE
+
+}
+
+
+enum Rates{
+  A 
+  B 
+  C 
+  D
+}
+
+enum Genres{
+  HORROR
+  COMEDY
+  SCIFY
+  DRAMA
+  HISTORY
+  MUSICAL
+  BIO
+  ANIMATION
+  ACTION
+}

@@ -1,0 +1,24 @@
+{
+  "name": "clone_netflix_backend",
+  "version": "1.0.0",
+  "description": "Clone del backend de netflix",
+  "main": "src/index.js",
+  "author": "Edwin Salgado",
+  "license": "MIT",
+  "private": false,
+  "scripts": {
+    "start": "nodemon nodemon -L src/bin/www",
+    "test": "jest"
+  },
+  "dependencies": {
+    "bcrypt": "^3.0.0",
+    "dotenv": "^6.0.0",
+    "graphql-yoga": "^1.16.2",
+    "jest": "^23.6.0",
+    "jsonwebtoken": "^8.3.0",
+    "prisma-binding": "^2.1.5"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.4"
+  }
+}

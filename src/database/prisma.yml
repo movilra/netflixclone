@@ -1,0 +1,8 @@
+endpoint: ${SRC:PRISMA_ENDPOINT,https://us1.prisma.sh/alex-000a09/database/prueba}
+datamodel: datamodel.graphql
+
+#Deploy Hook
+
+hooks:
+  post-deploy:
+    - graphql get-schema --project database
